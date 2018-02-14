@@ -1,0 +1,19 @@
+{
+  "name": "charlesread-dot-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^1.0.0-rc.1",
+    "fastify-auth0": "0.0.3",
+    "fastify-caching": "^2.0.3",
+    "fastify-cookie": "^1.2.1",
+    "fastify-server-session": "^1.0.6",
+    "require-self-ref": "^2.0.1"
+  }
+}
