@@ -14,7 +14,7 @@ fastify
     secretKey: 'some-secret-password-at-least-32-characters-long',
     sessionMaxAge: 1000 * 60 * 15, // 15 minutes
     cookie: {
-      domain: 'localhost',
+      domain: '.charlesread.com',
       path: '/',
       expires: 1000 * 60 * 15,
       sameSite: 'Lax' // important because of the nature of OAuth 2, with all the redirects
@@ -24,6 +24,7 @@ fastify
     domain: config.auth0.domain,
     client_id: config.auth0.client_id,
     client_secret: config.auth0.client_secret,
+    appUrl: 'http://charlesread.com',
     // optional
     transformer: async function (credentials) {
       credentials.log_in_date = new Date()
