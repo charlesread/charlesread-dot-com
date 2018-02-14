@@ -3,6 +3,7 @@
 require('require-self-ref')
 
 const fastify = require('fastify')()
+const ip = require('ip')
 
 const plugin = require('fastify-auth0')
 const config = require('~/config')
@@ -46,7 +47,7 @@ fastify.get('/', async function (request, reply) {
   })
 })
 
-fastify.listen(8001)
+fastify.listen(8001, ip.address())
   .then(function () {
     console.log('listening on %s', fastify.server.address().port)
   })
